@@ -2,14 +2,19 @@ import java.util.Scanner;
 
 public class LeapYear {
     public static void main(String[] args) {
-        int year;
-        boolean isLeapYear = false;
         Scanner scanner = new Scanner(System.in);
+        int year;
         System.out.println("Enter a year: ");
         year = scanner.nextInt();
-        if (year % 4 == 0) {
-            if (year % 100 == 0) {
-                if (year % 400 == 0) {
+
+        boolean isLeapYear = false;
+        boolean isDivisibleBy4 = year % 4 == 0;
+        boolean isDivisibleBy100 = year % 100 == 0;
+        boolean isDivisibleBy400 = year % 400 == 0;
+
+        if (isDivisibleBy4) {
+            if (isDivisibleBy100) {
+                if (isDivisibleBy400) {
                     isLeapYear = true;
                 }
             } else {
