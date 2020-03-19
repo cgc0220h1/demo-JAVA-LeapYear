@@ -21,6 +21,7 @@ public class LeapYear {
                 isLeapYear = true;
             }
         }
+
         if (isLeapYear) {
             System.out.printf("%d is a leap year", year);
         } else {
